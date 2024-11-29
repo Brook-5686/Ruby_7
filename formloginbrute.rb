@@ -57,7 +57,8 @@ module LoginFormBruteForcer
     password_field.value = password
 
     begin
-      $logfile.info("Trying app-specific default creds first -> #{dcreds}")
+      redacted_dcreds = dcreds.gsub(/:.*$/, ":[redacted]")
+      $logfile.info("Trying app-specific default creds first -> #{redacted_dcreds}")
       puts ("[+] Trying app-specific default creds first -> #{dcreds}\n").green
 
       login_request = login_form.submit
