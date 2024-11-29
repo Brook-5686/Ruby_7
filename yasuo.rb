@@ -491,8 +491,8 @@ private
     sleep 0.5
 
     if response and (response.code == "200" or response.code == "301")
-      $logfile.info("[+] Yatta, found default login credentials for #{url401} - #{username}:#{password}\n")
-      puts ("[+] Yatta, found default login credentials for #{url401} - #{username}:#{password}\n").green
+      $logfile.info("[+] Yatta, found default login credentials for #{url401} - #{username}:[redacted]\n")
+      puts ("[+] Yatta, found default login credentials for #{url401} - #{username}:[redacted]\n").green
       return username, password
     end
     #Smart brute-foce ends here    
@@ -505,8 +505,8 @@ private
       sleep 0.5
 
       if response and (response.code == "200" or response.code == "301")
-        $logfile.info("[+] Yatta, found default login credentials for #{url401} - #{username}:#{password}\n")
-        puts ("[+] Yatta, found default login credentials for #{url401} - #{username}:#{password}\n").green
+        $logfile.info("[+] Yatta, found default login credentials for #{url401} - #{username}:[redacted]\n")
+        puts ("[+] Yatta, found default login credentials for #{url401} - #{username}:[redacted]\n").green
         return username, password
       end
     end
